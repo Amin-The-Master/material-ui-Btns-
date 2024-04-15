@@ -4,7 +4,7 @@ import TextBtn from './components/Btns/TextBtn';
 import ContainedBtn from './components/Btns/ContainedBtn';
 import OutLinedBtn from './components/Btns/OutLinedBtn';
 import DisabledBtn from './components/Btns/DisabledBtn';
-import SuccesBtn from './SuccessBtn';
+import SuccesBtn from './components/Btns/SuccessBtn';
 import ComplexBtn from './components/Btns/ComplexBtn';
 function App() {
   return (
