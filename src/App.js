@@ -1,36 +1,31 @@
 import './App.css'
 import { LoadingButton } from "@mui/lab";
-import TextBtn from './components/Btns/TextBtn';
-import ContainedBtn from './components/Btns/ContainedBtn';
-import OutLinedBtn from './components/Btns/OutLinedBtn';
-import DisabledBtn from './components/Btns/DisabledBtn';
-import SuccesBtn from './components/Btns/SuccessBtn';
-import ComplexBtn from './components/Btns/ComplexBtn';
+import Btn from './components/Btns/Btn';
 function App() {
   return (
     <div className="text-center">
       <div className='mt-6'>
-        <TextBtn className='
+        <Btn className='
         text-3xl
         p-3
         duration-200
         text-[#3498db] 
         hover:rounded 
         hover:bg-[#2980b9] 
-        hover:bg-opacity-10'/>
+        hover:bg-opacity-10'>TEXT</Btn>
       </div>
       <div className='mt-6'> 
-        <ContainedBtn className='
+        <Btn className='
         text-3xl
         p-3
         duration-200
         text-[#ecf0f1]
         rounded 
         bg-[#9b59b6] 
-        hover:bg-[#663a77]'/>
+        hover:bg-[#663a77]'>CONTAINED</Btn>
       </div>
       <div className='mt-6'> 
-        <OutLinedBtn className='
+        <Btn className='
         text-3xl
         p-3
         duration-200
@@ -39,20 +34,20 @@ function App() {
         text-[#e74c3c]
         rounded 
         hover:bg-[#e74c3c]
-        hover:bg-opacity-10'/>
+        hover:bg-opacity-10'>OUTLINED</Btn>
       </div>
       <div className='mt-6'> 
-        <DisabledBtn className='
+        <Btn className='
         text-3xl
         p-3
         text-[#bdc3c7]
         rounded 
         bg-[#bdc3c7]
         opacity-80
-        bg-opacity-30'/>
+        bg-opacity-30'>DISABLED</Btn>
       </div>
       <div className='mt-6'> 
-        <DisabledBtn className='
+        <Btn className='
         text-3xl
         p-3
         text-[#bdc3c7]
@@ -60,10 +55,10 @@ function App() {
         border-[#bdc3c7]
         rounded 
         opacity-80
-        border-opacity-30'/>
+        border-opacity-30'>DISABLED</Btn>
       </div>
       <div className='mt-6'> 
-        <SuccesBtn className='
+        <Btn className='
         text-3xl
         p-3
         duration-200
@@ -71,7 +66,7 @@ function App() {
         text-[#fff]
         bg-[#2e7d32]
         hover:bg-[#1c4e1f]
-        '/>
+        '>SUCCSSES</Btn>
       </div>
       <div className='mt-6'> 
       <LoadingButton className='p-3' loading variant="outlined" >
@@ -84,7 +79,7 @@ function App() {
       </LoadingButton>
       </div>
       <div className='mt-6'> 
-      <ComplexBtn className='
+      <Btn className='
         text-3xl
         hover:p-3
         duration-200
@@ -94,7 +89,7 @@ function App() {
         hover:border
         hover:border-solid
         hover:border-[#000]
-        '/>
+        '>COMPLEX</Btn>
       </div>
     </div>
   );
