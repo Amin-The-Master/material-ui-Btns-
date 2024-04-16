@@ -1,6 +1,10 @@
 import './App.css'
 import { LoadingButton } from "@mui/lab";
-import Btn from './components/Btns/Btn';
+
+// use Button istead of make separate Btn COMPONENT =>
+// import Btn from './components/Btns/Btn';
+
+import { Button as Btn} from "@mui/base";
 function App() {
   return (
     <div className="text-center">
