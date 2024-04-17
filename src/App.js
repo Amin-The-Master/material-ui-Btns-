@@ -24,8 +24,8 @@ function App() {
       <Button className='ml-6 mt-6' variant={'outlined'} color={'error'}>error</Button> 
 
       <Button className='ml-3 mt-6' size={'small'} variant={'text'}>small</Button>
-      <Button className='ml-6 mt-6' size={'medium'} variant={'text'}>medium</Button>
-      <Button className='ml-6 mt-6' size={'large'} variant={'text'}>Large</Button> 
+      <Button className='ml-6 mt-6' size={'medium'} variant={'contained'}>medium</Button>
+      <Button className='ml-6 mt-6' size={'large'} variant={'outlined'}>Large</Button> 
     </div>
   );
 }
