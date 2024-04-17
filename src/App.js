@@ -4,11 +4,11 @@ import Button from './components/Btns/Button';
 
 function App() {
   return (
-    <div className="d-flex justify-around">
+    <div className="d-flex justify-around ml-[120px] mr-[120px]">
       <Button className='ml-3 mt-6' variant={'text'}>TEXT</Button>
       <Button className='ml-6 mt-6' variant={'contained'}>contained</Button>
       <Button className='ml-6 mt-6' variant={'outlined'}>outlined</Button>
-      <Button className='ml-6 mt-6'>Primary</Button>
+      <Button className='ml-6 mt-6' >Primary</Button>
       <Button className='ml-6 mt-6' disabled>disabled</Button>
       <Button className='ml-6 mt-6' variant={'contained'} disabled>disabled</Button>
       <Button className='ml-6 mt-6' variant={'outlined'} disabled>disabled</Button>

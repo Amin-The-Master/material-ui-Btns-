@@ -1,59 +1,65 @@
 
 const Button = (props) => {
-    let {classes,size,variant,disabled,href,color,onClick,children} = props;
+    let {classes,size,variant,disabled,href,color,children} = props;
     const usualClass = ' text-2xl font-sans p-3 rounded hover:rounded duration-200 ';
-    const small = usualClass.replace('text-2xl','text-xl');
-    const medium = usualClass.replace('text-2xl','text-3xl') ;
+    const medium = usualClass.replace('text-2xl','text-3xl');
     const large = usualClass.replace('text-2xl','text-4xl');
   
-    const primaryText = usualClass +
+    const checkSize = () => {
+        if(!size || size === 'small' ) return usualClass;
+        if(size === 'medium') return medium;
+        if(size === 'large') return large;
+    }
+
+    // START PRIMARY
+    const primaryText = checkSize() +
     'text-[#1976d2] hover:bg-[#1976d2] hover:bg-opacity-10';
 
-    const primaryContained = usualClass + 
+    const primaryContained = checkSize() + 
         'text-[#fff] bg-[#1976d2] hover:bg-[#1565c0]';
 
-    const primaryOutlined = usualClass + 
+    const primaryOutlined = checkSize() + 
     'text-[#1976d2] border border-2 border-[#1976d2] hover:bg-[#1976d2] hover:bg-opacity-10';
-
+    // END PRIMARY
 
     /// START COLORS
-    const secondaryText = usualClass +
+    const secondaryText = checkSize() +
     'text-[#9c27b0] hover:bg-[#9c27b0] hover:bg-opacity-10';
     
-    const secondaryContained = usualClass +
-    'text-[#fff] bg-[#9c27b0] hover:bg-[#9c27b0]';
+    const secondaryContained = checkSize() +
+    'text-[#fff] bg-[#9c27b0] hover:bg-[#7b1fa2]';
     
-    const secondaryOutlined = usualClass +
+    const secondaryOutlined = checkSize() +
     'text-[#9c27b0] border-2 border-[#9c27b0] hover:bg-[#9c27b0] hover:bg-opacity-10';
     
-    const successText = usualClass + 
+    const successText = checkSize() + 
     'text-[#2e7d32] hover:bg-[#2e7d32] hover:bg-opacity-10';
 
-    const successContained = usualClass + 
+    const successContained = checkSize() + 
     'text-[#fff] bg-[#2e7d32] hover:bg-[#1b5e20]';
 
-    const successOutlined = usualClass + 
+    const successOutlined = checkSize() + 
     'text-[#2e7d32] border-2 border-[#2e7d32] hover:bg-[#2e7d32] hover:bg-opacity-10';
 
-    const errorText = usualClass + 
+    const errorText = checkSize() + 
     'text-[#d32f2f] hover:bg-[#d32f2f] hover:bg-opacity-10';
 
-    const errorContained = usualClass + 
+    const errorContained = checkSize() + 
     'text-[#fff] bg-[#d32f2f] hover:bg-[#921f1f]';
 
-    const errorOutlined = usualClass + 
+    const errorOutlined = checkSize() + 
     'text-[#d32f2f] border-2 border-[#d32f2f] hover:bg-[#d32f2f] hover:bg-opacity-10';
 
     //////////END
     
     /////////Start Disables
-    const disableText = usualClass + 
+    const disableText = checkSize() + 
     'text-[#1C2025] text-opacity-10';
 
-    const disableContained = usualClass + 
+    const disableContained = checkSize() + 
     'text-[#000] text-opacity-20 bg-[#1C2025] bg-opacity-10';
 
-    const disableOutlined = usualClass + 
+    const disableOutlined = checkSize() + 
     'text-[#d32f2f] text-[#000] text-opacity-20 border-2 border-[#1C2025] border-opacity-20';
     
     /////////END Disables
@@ -113,7 +119,7 @@ const Button = (props) => {
     disabled={disabled}
     href={href}
     color={color} 
-    onClick={onClick}>
+    onClick={props.onClick}>
         {children}
     </button>
 }
